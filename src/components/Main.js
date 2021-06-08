@@ -9,7 +9,7 @@ const Main = () => {
           <h2>overcast clouds</h2>
           <div className="desc">
             <p>
-              <b>Temperature</b> 10&#186; to 11&#186;
+              <b>Temperature</b> 10&#186;C to 11&#186;C
             </p>
             <p>
               <b>Humidity</b> 78% <b>Pressure</b> 1008.48
