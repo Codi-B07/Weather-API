@@ -1,25 +1,90 @@
-.app {
-  height: 100vh;
-  width: 100vw;
-  transition: background-color 1s ease-in;
+*{
+  font-family: "Raleway", sans-serif;
 }
 
-.app__header,
-.app__main {
-  width: 100%;
+.app__header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #759EDA;
+  transition: all 2s;
+}
+
+.app__main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/*  Search bar */
+.app__main img{
+  width: 150px;
+  height: auto;
+  transition: all 0.5s;
+}
 
-/* Current weather */
+.app__main img:hover{
+  width: 220px;
+}
 
-div {
-  border: 5px solid red;
+.app__main p:first-of-type{
+  font-size: x-large;
+}
+
+.app__main p:last-child{
+  word-spacing: 5px;
+}
+
+.btn{
+  margin-left: 2%;
+  background-color: #5879C7;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 1.5s;
+}
+
+.btn:hover{
+  border-radius: 30px;
+}
+
+input {
+  margin-top: 5px;
+  padding-bottom: 10px; 
+  background-color: #759EDA;
+  font-size: 24px;
+  color: white;
+  border: none;
+}
+
+input:focus{
+  outline: none;
+  border-bottom: 1px solid #655bc9;
+}
+
+h2{
+  color: white;
+  padding: 0;
+}
+
+.hourly{
+  display: flex;
+  justify-content: center;
+}
+
+.hourly div{
+  margin-right: 1%;
+  text-align: center;
+}
+
+.hourly img{
+  width: 85px;
+  transition: all 0.5s;
+}
+
+.hourly img:hover{
+  width: 95px;
 }
