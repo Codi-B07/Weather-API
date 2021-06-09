@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className="app__header">
-            <input type="text" value="London"/>
+            <input type="text" defaultValue={props.data}/>
             <button className="btn">FIND WEATHER</button>
         </div>
     )
