@@ -1,43 +1,32 @@
 import React from "react";
+import mostlycloudy from "../img/weather-icons/mostlycloudy.svg";
+import clear from "../img/weather-icons/clear.svg";
+import clouds from "../img/weather-icons/cloudy.svg";
+import rain from "../img/weather-icons/rain.svg";
 
-const Hourly = ({ img1, img2, img3, img4, data }) => {
+const Hourly = ({ data }) => {
+  var image;
   return (
     <div className="hourly">
-      <div>
-        <p>{data[1].dt_txt.substring(11, 16)}</p>
-        <img src={img2} alt="sunny icon" />
-        <p>{Math.round(data[1].main.temp - 273.15)}&#186;C</p>
-      </div>
-      <div>
-        <p>{data[2].dt_txt.substring(11, 16)}</p>
-        <img src={img2} alt="clear icon" />
-        <p>{Math.round(data[2].main.temp - 273.15)}&#186;C</p>
-      </div>
-      <div>
-        <p>{data[3].dt_txt.substring(11, 16)}</p>
-        <img src={img2} alt="sunny icon" />
-        <p>{Math.round(data[3].main.temp - 273.15)}&#186;C</p>
-      </div>
-      <div>
-        <p>{data[4].dt_txt.substring(11, 16)}</p>
-        <img src={img3} alt="cloudy icon" />
-        <p>{Math.round(data[4].main.temp - 273.15)}&#186;C</p>
-      </div>
-      <div>
-        <p>{data[5].dt_txt.substring(11, 16)}</p>
-        <img src={img4} alt="rain icon" />
-        <p>{Math.round(data[5].main.temp - 273.15)}&#186;C</p>
-      </div>
-      <div>
-        <p>{data[6].dt_txt.substring(11, 16)}</p>
-        <img src={img4} alt="rain icon" />
-        <p>{Math.round(data[6].main.temp - 273.15)}&#186;C</p>
-      </div>
-      <div>
-        <p>{data[7].dt_txt.substring(11, 16)}</p>
-        <img src={img1} alt="mostlycloudy icon" />
-        <p>{Math.round(data[7].main.temp - 273.15)}&#186;C</p>
-      </div>
+      {data.slice(1, 8).map((post, i) => {
+        if(post.weather[0].main.toLowerCase()=="clear"){
+          image=clear;
+        }
+        if(post.weather[0].main.toLowerCase()=="clouds"){
+          image=clouds;
+        }
+        if(post.weather[0].main.toLowerCase()=="rain"){
+          image=rain;
+        }
+        return (
+          <div key={i}>
+            {/* console.log({i}); */}
+            <p>{post.dt_txt.substring(11, 16)}</p>
+            <img src={image} alt={post.weather[0].main.toLowerCase()+" icon"} />
+            <p>{Math.round(post.main.temp - 273.15)}&#186;C</p>
+          </div>
+        );
+        })}
     </div>
   );
 };

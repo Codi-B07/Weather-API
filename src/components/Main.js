@@ -1,10 +1,5 @@
 import React from "react";
 import clear from "../img/weather-icons/clear.svg";
-import partlycloudy from "../img/weather-icons/partlycloudy.svg";
-import cloudy from "../img/weather-icons/cloudy.svg";
-import drizzle from "../img/weather-icons/drizzle.svg";
-import rain from "../img/weather-icons/rain.svg";
-import fog from "../img/weather-icons/fog.svg";
 
 const Main = (props) => {
   // console.log("titi", props);
