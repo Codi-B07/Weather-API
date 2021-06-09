@@ -11,8 +11,8 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    const weather = "fakeWeatherData.list";
-    console.log("dana", weather[0].weather[0].main.toLowerCase());
+    const weather = fakeWeatherData.list;
+    // console.log("dana", weather[0].weather[0].main.toLowerCase());
     // for (let i = 0; i < weather.length; i++) {
     //   console.log(weather[i].main.temp);
     // }
